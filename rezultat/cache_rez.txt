@@ -1,0 +1,143 @@
+TIMP:     0 | addr: 000000000000000000000 | hit: x | cdout: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:   200 | addr: 000000000000000000000 | hit: 0 | cdout: 00000000000000000000000000000000
+
+
+TIMP:   400 | addr: 000000000000000000000 | hit: 0 | cdout: 00000000000000000000000000000000
+
+
+TIMP:   600 | addr: 000000000000000000000 | hit: 0 | cdout: 00000000000000000000000000000000
+
+
+TIMP:   800 | addr: 000000000000000000100 | hit: 0 | cdout: 00000000000000000000000000000000
+
+
+TIMP:  1000 | addr: 000000000000000000100 | hit: 0 | cdout: 00000000000000000000000000000000
+
+
+TIMP:  1200 | addr: 000000000000000000100 | hit: 0 | cdout: 00000000000000000000000000000000
+
+
+TIMP:  1400 | addr: 000000000000000000100 | hit: 0 | cdout: 00000000000000000000000000000000
+
+
+TIMP:  1600 | addr: 000000000000000000100 | hit: 1 | cdout: 11000110101100101100111100010011
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  1800 | addr: 000000000000000000100 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  2000 | addr: 000000000000000000100 | hit: 1 | cdout: 11000110101100101100111100010011
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  2200 | addr: 000000000000000000100 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  2400 | addr: 000000000000000000100 | hit: 1 | cdout: 11000110101100101100111100010011
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  2600 | addr: 000000000000000000100 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  2800 | addr: 000000000000000000101 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  3000 | addr: 000000000000000000101 | hit: 1 | cdout: 01011011111001100110100101101010
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  3200 | addr: 000000000000000000101 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  3400 | addr: 000000000000000000110 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  3600 | addr: 000000000000000000110 | hit: 1 | cdout: 01110101000001000000000011001000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  3800 | addr: 000000000000000000110 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  4000 | addr: 000000000000000000111 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  4200 | addr: 000000000000000000111 | hit: 1 | cdout: 10001000111000000001110101101100
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  4400 | addr: 000000000000000000111 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  4600 | addr: 000000000000000000111 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+TIMP:  4800 | addr: 000000000000000000111 | hit: 1 | cdout: 00000000000000000000000000000000
+SET   0 | Way0 (Valid=1): 88e01d6c750400c85be6696ac6b2cf1320e4509f3dfff50383264f51a2077e6e
+        | Way1 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way2 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        | Way3 (Valid=0): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+

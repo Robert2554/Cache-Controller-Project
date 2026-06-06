@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/modelsim/Proiect_ALU
+vcache_controller
+!s110 1780733605
+!i10b 1
+!s100 B:Z=n8UNe^?:>9SlMXEA23
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IR=XO9ASVZNn09W00hMZnO1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/modelsim/CacheController
+w1780731497
+8D:/modelsim/CacheController/src/cache_controller.v
+FD:/modelsim/CacheController/src/cache_controller.v
+!i122 43
+L0 3 235
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1780733605.000000
+!s107 D:/modelsim/CacheController/src/cache_controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/modelsim/CacheController/src/cache_controller.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vcache_controller_tb
+Z6 !s110 1780733606
+!i10b 1
+!s100 g>ekElk5B>N5ZXgWIg>AY3
+R0
+I0oKVHfM`DK:G`;E6@jFaB0
+R1
+R2
+w1780733569
+8D:/modelsim/CacheController/tb/cache_controller_tb.v
+FD:/modelsim/CacheController/tb/cache_controller_tb.v
+!i122 45
+L0 3 159
+R3
+r1
+!s85 0
+31
+Z7 !s108 1780733606.000000
+!s107 D:/modelsim/CacheController/tb/cache_controller_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/modelsim/CacheController/tb/cache_controller_tb.v|
+!i113 1
+R4
+R5
+vmain_memory
+R6
+!i10b 1
+!s100 DX]lUlOEabPgN3V3=R4[c2
+R0
+IWo]dLhY?]@k;cBHNIdzN=3
+R1
+R2
+w1780731947
+8D:/modelsim/CacheController/src/main_memory.v
+FD:/modelsim/CacheController/src/main_memory.v
+!i122 44
+L0 3 42
+R3
+r1
+!s85 0
+31
+R7
+!s107 D:/modelsim/CacheController/src/main_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/modelsim/CacheController/src/main_memory.v|
+!i113 1
+R4
+R5
