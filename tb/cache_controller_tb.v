@@ -5,19 +5,17 @@ module cache_controller_tb;
     // Parametrii sistemului
     parameter BLOCK_SIZE    = 256;
     parameter ADDRESS_WIDTH = 21;
-    parameter INDEX_WIDTH   = 8;  // Adaptat pentru 256 seturi (4-way)
-    parameter TAG_WIDTH     = 10; // Adaptat pentru 4-way
+    parameter INDEX_WIDTH   = 8;  
+    parameter TAG_WIDTH     = 10; 
     parameter OFFSET_WIDTH  = 3;
     parameter WORD_SIZE     = 32;
     parameter NBLOCKS       = 256; 
     parameter MEM_FILE      = "tb/mem_data.txt";
 
-    // Perioada de ceas
     parameter CLK_PERIOD_NS       = 200;
     parameter MISS_LATENCY_CYCLES = 6;
     parameter HIT_LATENCY_CYCLES  = 2;
 
-    // Semnale generate de testbench (reg)
     reg clock;
     reg rst_n;
     reg [20:0] caddress;
@@ -25,7 +23,6 @@ module cache_controller_tb;
     reg rden;
     reg wren;
 
-    // Semnale de interconectare si rezultate (wire)
     wire [31:0]  cdout;
     wire         hit;
     wire [255:0] mdin;
@@ -34,7 +31,6 @@ module cache_controller_tb;
     wire         mrden;
     wire         mwren;
 
-    // Generarea semnalului de ceas
     initial begin
         clock = 1'b1;
         forever #(CLK_PERIOD_NS / 2) clock = ~clock;
@@ -49,7 +45,7 @@ module cache_controller_tb;
         end
     endtask
 
-    // Task pentru cerere de citire (Read)
+    // Task pentru cerere de citire
     task cache_read;
         input [20:0] addr;
         input integer wait_cycles_n;
@@ -94,15 +90,10 @@ module cache_controller_tb;
         .dout(mdin)
     );
 
-    // Declaratii pentru lucrul cu fisierul de log
     integer file_id;
     integer idx;
 
-    // Stimuli de test
     initial begin
-        //$dumpfile("cache_controller_tb.vcd");
-        //$dumpvars;
-
         // Initializare
         caddress = 21'd0;
         cdin     = 32'd0;
@@ -114,18 +105,25 @@ module cache_controller_tb;
         rst_n = 1'b1;
         wait_cycles(1);
 
-        // Citire la "rece" (Cold read): asteptam un MISS, dureaza MISS_LATENCY_CYCLES
+        // --- TEST PENTRU SET 0 ---
+        // Asteptam un MISS la citirea din blocul aferent Setului 0
         cache_read(21'h00004, MISS_LATENCY_CYCLES);
+        cache_read(21'h00005, HIT_LATENCY_CYCLES);  // Hit
 
-        // Citire acelasi set/tag/linie (Wider constants truncate to the same 21-bit address)
-        cache_read(21'h00004, HIT_LATENCY_CYCLES);
+        // --- TEST PENTRU SET 1 ---
+        // Adresa 8 (hexazecimal) pica exact in Setul 1, offset 0
+        cache_read(21'h00008, MISS_LATENCY_CYCLES); // Va face MISS si va umple Set 1, Way 0
+        cache_read(21'h00009, HIT_LATENCY_CYCLES);  // Va face HIT instant
 
-        // Acelasi cache line, offset diferit: asteptam HIT
-        cache_read(21'h00005, HIT_LATENCY_CYCLES);
-        cache_read(21'h00006, HIT_LATENCY_CYCLES);
-        cache_read(21'h00007, HIT_LATENCY_CYCLES);
+        // --- TEST PENTRU SET 2 ---
+        // Adresa 10 (hexazecimal) pica in Setul 2
+        cache_read(21'h00010, MISS_LATENCY_CYCLES); // Miss -> umple Set 2, Way 0
 
-        wait_cycles(2);
+        // --- TEST PENTRU SET 255 (Ultimul) ---
+        // Adresa 7F8 pica in Setul 255
+        cache_read(21'h007F8, MISS_LATENCY_CYCLES); // Miss -> umple Set 255, Way 0
+
+        wait_cycles(4);
         
         if (file_id != 0) begin
             $fclose(file_id);
@@ -145,7 +143,7 @@ module cache_controller_tb;
         if (file_id != 0) begin
             $fdisplay(file_id, "TIMP: %5d | addr: %b | hit: %b | cdout: %b", $time, caddress, hit, cdout);
             
-            // Parcurgem toate cele 256 de seturi, dar afi??m DOAR dac? au date valide
+            // Parcurgem toate cele 256 de seturi, dar afisam DOAR daca au date valide
             for (idx = 0; idx < 256; idx = idx + 1) begin
                 if (DUT_CACHE.valid_0[idx] || DUT_CACHE.valid_1[idx] || DUT_CACHE.valid_2[idx] || DUT_CACHE.valid_3[idx]) begin
                     $fdisplay(file_id, "SET %3d | Way0 (Valid=%b): %h", idx, DUT_CACHE.valid_0[idx], DUT_CACHE.mem_0[idx]);

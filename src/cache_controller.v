@@ -4,7 +4,7 @@ module cache_controller (
     input wire clock,
     input wire rst_n,
 
-    // Interfa?a cu CPU
+    // Interfata cu CPU
     input wire [20:0] caddress,
     input wire [31:0] cdin,
     input wire rden,
@@ -12,7 +12,7 @@ module cache_controller (
     output wire hit,
     output reg [31:0] cdout,
 
-    // Interfa?a cu Memoria Principal?
+    // Interfata cu Memoria Principala
     input wire [255:0] mdin,
     output reg [255:0] mdout,
     output reg [17:0] maddress,
@@ -32,7 +32,7 @@ module cache_controller (
 
     reg [2:0] current_state, next_state;
 
-    // Registre interne pentru cereri re?inute
+    // Registre interne pentru cereri retinute
     reg [20:0] req_addr;
     reg        req_read;
     reg        req_write;
@@ -43,13 +43,13 @@ module cache_controller (
     wire [7:0]  active_idx  = active_addr[10:3];
     wire [2:0]  active_off  = active_addr[2:0];
 
-    // Array-uri pentru cele 4 c?i (256 seturi)
+    // Array-uri pentru cele 4 cai (256 seturi)
     reg valid_0 [0:255]; reg valid_1 [0:255]; reg valid_2 [0:255]; reg valid_3 [0:255];
     reg dirty_0 [0:255]; reg dirty_1 [0:255]; reg dirty_2 [0:255]; reg dirty_3 [0:255];
     reg [9:0] tag_0 [0:255]; reg [9:0] tag_1 [0:255]; reg [9:0] tag_2 [0:255]; reg [9:0] tag_3 [0:255];
     reg [255:0] mem_0 [0:255]; reg [255:0] mem_1 [0:255]; reg [255:0] mem_2 [0:255]; reg [255:0] mem_3 [0:255];
     
-    // Contoare LRU pe 2 bi?i (0=MRU, 3=LRU)
+    // Contoare LRU pe 2 biti (0=MRU, 3=LRU)
     reg [1:0] lru_0 [0:255]; reg [1:0] lru_1 [0:255]; reg [1:0] lru_2 [0:255]; reg [1:0] lru_3 [0:255];
 
     // Logica de Hit (Comparare tag-uri simultan)
@@ -72,7 +72,7 @@ module cache_controller (
     wire [31:0] read_data;
     assign read_data = hit_block[(active_off * 32) +: 32]; // Extragerea cuvântului pe baza offsetului
 
-    // Logica de Victim Selection (Alegerea c?ii de înlocuit folosind LRU)
+    // Logica de Victim Selection (Alegerea caii de înlocuit folosind LRU)
     wire inv_0 = ~valid_0[active_idx];
     wire inv_1 = ~valid_1[active_idx];
     wire inv_2 = ~valid_2[active_idx];
@@ -83,7 +83,7 @@ module cache_controller (
     wire [1:0] v_lru_2 = lru_2[active_idx];
     wire [1:0] v_lru_3 = lru_3[active_idx];
 
-    // Prefer? blocurile invalide; dac? toate sunt valide, ia blocul cu LRU == 3
+    // Prefera blocurile invalide; daca toate sunt valide, ia blocul cu LRU == 3
     wire [1:0] victim_way = inv_0 ? 2'd0 :
                             inv_1 ? 2'd1 :
                             inv_2 ? 2'd2 :
@@ -133,12 +133,12 @@ module cache_controller (
                 next_state = STATE_IDLE;
             end
             STATE_READ_MISS, STATE_WRITE_MISS: begin
-                if (victim_dirty) // Dac? blocul ce va fi suprascris a fost modificat, Write-Back
+                if (victim_dirty) // Daca blocul ce va fi suprascris a fost modificat, Write-Back
                     next_state = STATE_REPLACE;
                 else
                     next_state = STATE_FETCH;
             end
-            STATE_REPLACE: begin // Write-Back c?tre memorie
+            STATE_REPLACE: begin // Write-Back catre memorie
                 mwren = 1'b1;
                 maddress = {victim_tag, active_idx}; 
                 mdout = victim_block;
@@ -172,7 +172,6 @@ module cache_controller (
 
     integer i;
     
-    // State Machine Secven?ial
     always @(posedge clock or negedge rst_n) begin
         if (!rst_n) begin
             current_state <= STATE_IDLE;
@@ -189,7 +188,6 @@ module cache_controller (
         end else begin
             current_state <= next_state;
 
-            // Latch request data
             if (current_state == STATE_IDLE && (rden || wren)) begin
                 req_addr  <= caddress;
                 req_read  <= rden;
@@ -197,7 +195,7 @@ module cache_controller (
                 req_wdata <= cdin;
             end
 
-            // FILL: Scriem din Memorie în Cache
+            // Scriem din Memorie în Cache
             if (current_state == STATE_FILL) begin
                 case (victim_way)
                     2'd0: begin mem_0[active_idx] <= mdin; tag_0[active_idx] <= active_tag; valid_0[active_idx] <= 1'b1; dirty_0[active_idx] <= 1'b0; end
@@ -207,7 +205,7 @@ module cache_controller (
                 endcase
             end
 
-            // WRITE HIT: Suprascriem cuvântul în bloc (Write-allocate se asigur? c? ajungem aici pe Miss)
+            // WRITE HIT: Suprascriem cuvântul în bloc
             if (current_state == STATE_WRITE_HIT) begin
                 case (hit_way)
                     2'd0: begin mem_0[active_idx][(active_off * 32) +: 32] <= req_wdata; dirty_0[active_idx] <= 1'b1; end
@@ -217,7 +215,7 @@ module cache_controller (
                 endcase
             end
 
-            // LRU Update: Increment?m toate modurile mai mici decât vechea valoare ?i reset?m modul selectat pe 0 (MRU)
+            // LRU Update
             if (do_lru_update) begin
                 if (lru_0[active_idx] < target_old_lru) lru_0[active_idx] <= lru_0[active_idx] + 1;
                 if (lru_1[active_idx] < target_old_lru) lru_1[active_idx] <= lru_1[active_idx] + 1;

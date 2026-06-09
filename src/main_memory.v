@@ -1,8 +1,8 @@
 `timescale 1ns/1ps
 
 module main_memory #(
-    parameter ADDRESS_WIDTH = 18, // Adresa de bloc (21 bi?i adres? - 3 bi?i offset)
-    parameter BLOCK_SIZE = 256,   // 8 cuvinte * 32 bi?i
+    parameter ADDRESS_WIDTH = 18, // Adresa de bloc (21 biti adresa - 3 biti offset)
+    parameter BLOCK_SIZE = 256,   // 8 cuvinte * 32 biti
     parameter FILE = ""
 )(
     input wire clock,
@@ -13,9 +13,9 @@ module main_memory #(
     output reg [BLOCK_SIZE - 1:0] dout
 );
 
-    localparam DEPTH = 1 << ADDRESS_WIDTH; // 262144 de blocuri
+    localparam DEPTH = 1 << ADDRESS_WIDTH; 
     
-    // Memoria principal?
+    // Memoria principala
     reg [BLOCK_SIZE-1:0] mem [0:DEPTH-1];
     
     integer i;
